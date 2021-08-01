@@ -44,38 +44,47 @@ body{
     left: 170px;
 }
 
-#title, #input, #button, #label{
+#title, #input, #button, #label, #result{
     position: absolute;
 }
 
 #input, #button{
     height: 50px;
     width: 300px;
-    border-radius: 5px;
     left: 250px;
 }
 
-#input{
-    background: #5e2954;
-    border: 3px solid #33132D;
-    color: white;   
-    font-size: 20px;
+#input, #result{
+    background: #5c2151;
+    color: white;
     font-weight: bold;
     text-align: center;
+    vertical-align: middle;
+}
+
+#input, #button, #result{
+    border-radius: 5px;
+    border: 3px solid #33132D;
+}
+
+#input{
+    font-size: 20px;
     top: 250px;
-    transition: .5s ease-in;
+    transition: .2s ease-in;
 }
 
 #input:focus{
-    outline: none;
     background: #31222e;
     border: 4px solid #201b1f;
-    transition: .5s ease-in;
+    transition: .2s ease-in;
+}
+
+#input:focus, #button:focus{
+    outline: none;
 }
 
 #button{
     background: #201b1f;
-    border: 3px solid #33132D;
     color: white; 
     font-size: 20px;
     font-weight: bold;
@@ -83,12 +92,20 @@ body{
     border: none;
     top: 310px;
     cursor: pointer;
-    transition: .5s ease-in;
+    transition: .2s ease-in;
 }
 
 #button:hover{
     background: #5e2954;
-    transition: .5s ease-in;
+    transition: .2s ease-in;
+}
+
+#result{
+    height: 100px;
+    width: 500px;
+    font-size: 38px;
+    top: 400px;
+    left: 150px;
 }
 
 @keyframes gradient{
