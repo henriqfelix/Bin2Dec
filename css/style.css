@@ -33,7 +33,6 @@ body{
 }
 
 #title-span{
-    
     font-weight: bold;
     color: rgb(226, 66, 199)
 }
@@ -106,6 +105,7 @@ body{
     font-size: 38px;
     top: 400px;
     left: 150px;
+    transition: .5s ease-in;
 }
 
 @keyframes gradient{
