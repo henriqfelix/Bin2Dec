@@ -43,7 +43,7 @@ function showError(){
     print.style.backgroundColor = '#FF8C00'
     print.style.color = '#33132D'
 }
-
+//criando função que exibe número decimal
 function printDecimal(decimal){
     //capturando output
     const print = document.getElementById('result')
