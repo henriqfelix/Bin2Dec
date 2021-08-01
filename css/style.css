@@ -28,7 +28,8 @@ body{
     font-size: 100px;
     top: 40px;
     left: 205px;
-    text-shadow: rgb(48, 45, 45) 4px 4px 0.1px;
+    text-shadow: rgb(48, 45, 45) 4px 4px 10px;
+    padding: 10px;
 }
 
 #title-span{
