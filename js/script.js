@@ -4,15 +4,23 @@ const button = document.getElementById('button')
 button.addEventListener('click', function(){
     //capturando input
     const input = document.getElementById('input')
-    //chamando função que realizará a conversão (.value para caputar os caracteres inseridos no input)
-    treatData(input.value)
+    //verificando se há mais de 8 digitos
+    if(input.value.length <= 8){
+        //chamando função que realizará a conversão (.value para caputar os caracteres inseridos no input)
+        treatData(input.value)
+    }
+    else{
+        //chamando função que tratará os erros
+        treatError(0)
+    }
+    
 })
 //criando função que fará validação dos dados (queremos que aceite apenas '0' e '1')
 function treatData(value){
     //usando expressão regular para validar
     if (! /^[01]+$/.test(value)){
         //se o valor não for um número binário, a função 'showError' será chamada
-        showError()
+        treatError(1)
     }else{
         //se o valor for um número binário, a função 'calBinToDec' será chamada
         calcBinToDec(value)
@@ -33,12 +41,44 @@ function calcBinToDec(value){
     //chamando função que exibirá o resultado
     printDecimal(decimal);
 }
-//criando função que exibe mensagem de erro
-function showError(){
+//criando função que tratará os erros
+function treatError(error){
+    //erro 0 = número excede 8 digitos 
+    if(error === 0){
+        showErrorMoreThan8()
+        return
+    }
+    //erro 1 = valor não binário
+    if(error === 1){
+        showErrorNotBinary()
+        return
+    }
+}
+function showErrorMoreThan8(){
     //capturando output
-    const print = document.getElementById('result')
+    const print = capturePrint()
     //setando valor a ser exibido
-    print.value = 'Valor Inválido'
+    print.value = 'Número excede 8 digitos!'
+    //chamando função que setará os estilos css
+    styleError()
+}
+//criando função que exibe mensagem de erro
+function showErrorNotBinary(){
+    //capturando output
+    const print = capturePrint()
+    //setando valor a ser exibido
+    print.value = 'Valor Não Binário'
+    //chamando função que setará os estilos css
+    styleError()
+}
+//criando função que capturará o output
+function capturePrint(){
+    //retornando o elemendo 
+    return document.getElementById('result')
+}
+function styleError(){
+    //capturando output
+    const print = capturePrint()
     //setando estilos CSS
     print.style.backgroundColor = '#FF8C00'
     print.style.color = '#33132D'

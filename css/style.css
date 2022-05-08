@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     overflow: hidden;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body{
@@ -14,20 +16,18 @@ body{
 }
 
 #container{
-    height: 600px;
-    width: 800px;
-    position: relative;
-    margin: 0 auto;
-    margin-top: 60px;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #title{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: #33132D;
     font-size: 100px;
-    top: 40px;
-    left: 205px;
-    text-shadow: rgb(48, 45, 45) 4px 4px 10px;
+    text-shadow: rgb(48, 45, 45) 2px 2px 5px;
     padding: 10px;
 }
 
@@ -37,13 +37,8 @@ body{
 }
 
 #label{
+    margin-top: 1rem;
     font-size: 20px;
-    top: 200px;
-    left: 170px;
-}
-
-#title, #input, #button, #label, #result{
-    position: absolute;
 }
 
 #input, #button{
@@ -61,13 +56,14 @@ body{
 }
 
 #input, #button, #result{
+    margin-top: 1rem;
     border-radius: 5px;
     border: 3px solid #33132D;
 }
 
 #input{
-    font-size: 20px;
-    top: 250px;
+    font-size: 16px;
+    letter-spacing: 1px;
     transition: .2s ease-in;
 }
 
@@ -88,7 +84,6 @@ body{
     font-weight: bold;
     text-transform: uppercase;
     border: none;
-    top: 310px;
     cursor: pointer;
     transition: .2s ease-in;
 }
@@ -102,8 +97,6 @@ body{
     height: 100px;
     width: 500px;
     font-size: 38px;
-    top: 400px;
-    left: 150px;
     transition: .5s ease-in;
 }
 
