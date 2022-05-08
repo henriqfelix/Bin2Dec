@@ -6,7 +6,7 @@
 
 ### Pré visualização
 
-![gif de pré visualização](readme_gif/gif.gif)
+![gif de pré visualização](to_readme/gif.gif)
 
 ---
 
