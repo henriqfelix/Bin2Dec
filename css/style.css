@@ -42,9 +42,10 @@ body{
 }
 
 #input, #button{
+    font-size: 14px;
+    letter-spacing: 1.2px;
     height: 50px;
     width: 300px;
-    left: 250px;
 }
 
 #input, #result{
@@ -62,8 +63,6 @@ body{
 }
 
 #input{
-    font-size: 16px;
-    letter-spacing: 1px;
     transition: .2s ease-in;
 }
 
@@ -96,7 +95,7 @@ body{
 #result{
     height: 100px;
     width: 500px;
-    font-size: 38px;
+    font-size: 28px;
     transition: .5s ease-in;
 }
 
